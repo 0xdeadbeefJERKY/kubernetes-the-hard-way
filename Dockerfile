@@ -23,3 +23,6 @@ RUN apt update && apt install -y tmux
 # Add gcloud to PATH
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
 
+ADD gencerts.sh /usr/src/
+ADD pki /usr/src/pki/
+WORKDIR /usr/src/
